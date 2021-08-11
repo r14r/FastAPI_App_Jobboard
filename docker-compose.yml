@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      
+    container_name: playground_fastapi_jobboard
+
+    volumes:
+      - workspace:/workspace
+
+    ports:
+      - 8000:8000
